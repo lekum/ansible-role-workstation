@@ -22,5 +22,5 @@
 - name: Install the apt-packages
   apt: name={{ item.name }} state=latest update_cache=yes 
   sudo: yes
-  with_items: package_list
   when: "'required_ubuntu_version' not in item or ansible_distribution_version | version_compare(item.required_ubuntu_version, '>=')"
+  with_items: package_list
