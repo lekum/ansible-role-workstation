@@ -1,0 +1,24 @@
+---
+- include_vars: arduino.yml
+
+- name: Make the folder ~/Software/Arduino
+  file: path=~/Software/Arduino state=directory
+
+- name: Download the Arduino folder
+  get_url: url={{ arduino_download_link }} dest=~/Software/Arduino/arduino.tar.xz
+
+- name: Unarchive the Arduino folder
+  command: tar -xvf arduino.tar.xz chdir=~/Software/Arduino
+
+- name: Remove the .tar.xz file
+  file: path=~/Software/Arduino/arduino.tar.xz state=absent
+
+- name: Find out the arduino directory name
+  command: ls chdir=~/Software/Arduino
+  register: arduino_dir
+
+- name: Symlink the arduino binary
+  file: dest=~/Software/Arduino/arduino src=~/Software/Arduino/{{ arduino_dir.stdout }}/arduino state=link
+
+- name: Symlink the arduino logo
+  file: dest=~/Software/Arduino/logo.png src=~/Software/Arduino/{{ arduino_dir.stdout }}/reference/arduino.cc/img/logo_46.png state=link

@@ -1,0 +1,13 @@
+---
+global:
+    - virtualenvwrapper
+
+virtualenvs_python2:
+    - name: ansible
+      packages:
+          - paramiko
+          - PyYAML
+          - Jinja2
+          - httplib2
+          - boto
+          - docker-py

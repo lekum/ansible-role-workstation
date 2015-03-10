@@ -1,0 +1,7 @@
+---
+- { include: apt-packages.yml, tags: apt }
+- { include: pip-packages.yml, tags: pip }
+- { include: dotfiles.yml, tags: dotfiles }
+- { include: ad-hoc.yml, tags: ad-hoc }
+- { include: ansible.yml, tags: ansible }
+- { include: arduino.yml, tags: arduino }

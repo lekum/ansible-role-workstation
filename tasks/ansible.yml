@@ -1,0 +1,5 @@
+---
+- include_vars: ansible.yml
+
+- name: Clone the ansible Github repo
+  git: repo={{ ansible_github_repo }} dest=~/Software/ansible
