@@ -3,22 +3,29 @@
 
 - name: Make the folder ~/Software/Arduino
   file: path=~/Software/Arduino state=directory
+  register: arduino_folder
 
 - name: Download the Arduino folder
   get_url: url={{ arduino_download_link }} dest=~/Software/Arduino/arduino.tar.xz
+  when: arduino_folder|changed
 
 - name: Unarchive the Arduino folder
   command: tar -xvf arduino.tar.xz chdir=~/Software/Arduino
+  when: arduino_folder|changed
 
 - name: Remove the .tar.xz file
   file: path=~/Software/Arduino/arduino.tar.xz state=absent
+  when: arduino_folder|changed
 
 - name: Find out the arduino directory name
   command: ls chdir=~/Software/Arduino
   register: arduino_dir
+  when: arduino_folder|changed
 
 - name: Symlink the arduino binary
   file: dest=~/Software/Arduino/arduino src=~/Software/Arduino/{{ arduino_dir.stdout }}/arduino state=link
+  when: arduino_folder|changed
 
 - name: Symlink the arduino logo
   file: dest=~/Software/Arduino/logo.png src=~/Software/Arduino/{{ arduino_dir.stdout }}/reference/arduino.cc/img/logo_46.png state=link
+  when: arduino_folder|changed
