@@ -10,16 +10,17 @@ additional_keys:
       key_id: 7B0FAB3A13B907435925D9C954422A4B98AB5139
 
 package_list:
-    - git
-    - python3
-    - python-dev
-    - python3-dev
-    - python-virtualenv
-    - python-pip
-    - python3-pip
-    - vlc
-    - chromium-browser
-    - vim-gnome
-    - dropbox
-    - default-jre
-    - virtualbox-4.3
+    - name: git
+    - name: python3
+    - name: python-dev
+    - name: python3-dev
+    - name: python-virtualenv
+    - name: python-pip
+    - name: python3-pip
+      required_ubuntu_version: 13.04
+    - name: vlc
+    - name: chromium-browser
+    - name: vim-gnome
+    - name: dropbox
+    - name: default-jre
+    - name: virtualbox-4.3
