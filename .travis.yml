@@ -12,10 +12,10 @@ install:
 
 script:
     - ansible-playbook -v -i tests/inventory tests/test.yml --syntax-check
-    - ansible-playbook -v -i tests/inventory tests/test.yml --connection=local
-    - ansible-playbook -v -i tests/inventory tests/test.yml --connection=local
-    - > 
+    - >
       ansible-playbook -v -i tests/inventory tests/test.yml --connection=local
       | grep -q 'changed=0.*failed=0'
       && (echo 'Idempotence test: pass' && exit 0)
       || (echo 'Idempotence test: fail' && exit 1)
+    - ./tests/tests-apt-packages.sh
+    - ./tests/tests-pip-packages.sh

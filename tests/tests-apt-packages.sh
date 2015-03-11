@@ -1,0 +1,10 @@
+#! /bin/bash
+python --version
+python3 --version
+pip --version
+vlc --version
+gvim --version
+chromium-browser --version
+dropbox status
+java -version
+virtualbox --help
