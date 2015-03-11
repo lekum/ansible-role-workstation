@@ -1,5 +1,6 @@
 ---
 global:
+    - pip
     - virtualenvwrapper
 
 virtualenvs_python2:
