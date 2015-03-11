@@ -10,6 +10,7 @@ additional_keys:
       key_id: 7B0FAB3A13B907435925D9C954422A4B98AB5139
 
 package_list:
+    - name: aptitude
     - name: git
     - name: python3
     - name: python-dev
