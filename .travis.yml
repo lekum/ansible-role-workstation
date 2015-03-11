@@ -12,6 +12,7 @@ install:
 
 script:
     - ansible-playbook -v -i tests/inventory tests/test.yml --syntax-check
+    - ansible-playbook -v -i tests/inventory tests/test.yml
     - >
       ansible-playbook -v -i tests/inventory tests/test.yml --connection=local
       | grep -q 'changed=0.*failed=0'
