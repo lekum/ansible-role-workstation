@@ -1,5 +1,7 @@
 # ansible-role-workstation
 
+[![Build Status](https://travis-ci.org/lekum/ansible-role-workstation.svg?branch=master)](https://travis-ci.org/lekum/ansible-role-workstation)
+
 Role to deploy a new Ubuntu workstation.
 
 The tasks and vars are structured in these areas:
