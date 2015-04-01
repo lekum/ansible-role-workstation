@@ -19,7 +19,7 @@ Ubuntu OS
 
 ## Role variables
 
-The variables are defined in the
+The variables are defined in the files of the `vars` folder.
 
 ## Dependencies
 
