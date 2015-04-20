@@ -6,7 +6,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'chase/vim-ansible-yaml'
-Plugin 'hdime/python-syntax'
+Plugin 'hdima/python-syntax'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
