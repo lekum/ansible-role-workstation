@@ -14,5 +14,7 @@ filetype plugin indent on    " required
 syntax on
 colorscheme desert
 set encoding=utf-8
-set showcmd " Para ver el comando que estamos escribiendo
+set showcmd " To show the command we are writing
 imap jk <Esc>
+" Press F5 to remove trailing whitespace
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
