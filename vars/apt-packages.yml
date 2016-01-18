@@ -5,7 +5,7 @@ additional_repos:
 
 additional_keys:
     - keyserver: pgp.mit.edu
-      key_id: 5044912E 
+      key_id: 5044912E
     - url: https://www.virtualbox.org/download/oracle_vbox.asc
       key_id: 7B0FAB3A13B907435925D9C954422A4B98AB5139
 
@@ -24,3 +24,5 @@ package_list:
     - name: dropbox
     - name: default-jre
     - name: virtualbox-4.3
+    - name: tmux
+    - name: xclip
