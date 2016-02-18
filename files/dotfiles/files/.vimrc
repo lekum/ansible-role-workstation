@@ -9,6 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Bundle 'chase/vim-ansible-yaml'
 Plugin 'hdima/python-syntax'
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
